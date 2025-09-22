@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>ĐĂNG KÝ</h2>
+    <form name="dangnhap" action="XuLyDangNhap.php" method="post">
+        <div>
+            Tên đăng nhập
+            <input name="username" placeholder="Nhập tên" />
+        </div>
+        <div>
+            Mật khẩu
+            <input name="password" type="password"/>
+        </div>
+        <div>
+            Nơi sinh:
+            <select name="noisinh">
+                <option value="HN">Hà Nội</option>
+                <option value="TN">Tây Ninh</option>
+                <option value="DT">Đồng Tháp</option>
+                <option value="HN"></option>
+            </select>
+        </div>
+        <div>
+            Giới tính:
+            <input checked type="radio" value="0" name="gioitinh">Nam
+            <input type="radio" value="1" name="gioitinh">Nữ
+            <input type="radio" value="-1" name="gioitinh">Khác
+        </div>
+        <div>
+            Hình ảnh:
+            <input type="file" name="hinh" />
+        </div>
+        <div>
+            <textarea rows="5"></textarea>
+        </div>
+        <button>Đăng nhập</button>
+        <button type="reset">Nhập lại</button>
+    </form>
+</body>
+</html>
