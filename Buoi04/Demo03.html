@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hồ cá cảnh</title>
+    <style>
+        #ho_ca {
+            width: 1000px;
+            height: 500px;
+            background-color: azure;
+        }
+
+        @keyframes caboi {
+            0% {}
+
+            25% {
+                transform: translate(500px, 250px);
+            }
+
+            50% {
+                transform: translate(800px, 350px);
+            }
+
+            52% {
+                transform: rotate(-180deg);
+                top: 400px;
+                left: 800px;
+            }
+        }
+
+        #con_ca {
+            animation: caboi 20s;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="ho_ca">
+        <img id="con_ca" src="cacanh.png" alt="Cá" />
+    </div>
+</body>
+
+</html>
