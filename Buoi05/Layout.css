@@ -1,0 +1,10 @@
+.hh-header {
+  height: 130px;
+  position: relative;
+}
+.hh-image {
+  height: inherit;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
