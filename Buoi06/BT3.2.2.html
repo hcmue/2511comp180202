@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Giá hoa quả</h2>
+    <div>
+        <input id="hoaqua">
+        <button type="button" onclick="xuLy()">Tra cứu</button>
+    </div>
+    <div id="ketqua"></div>
+    <script>
+        const myShop = {
+            'Ổi': '20000 VNĐ / kg',
+            'Dưa hấu': '20000 VNĐ / kg',
+            'Táo': '30000 VNĐ / kg',
+            'Cam': '40000 VNĐ / kg',
+            'Chôm Chôm': '40000 VNĐ / kg',
+            'Măng Cụt': '50000 VNĐ / kg'
+        };
+        function xuLy() {
+            let hoaqua = document.getElementById("hoaqua").value;
+            document.getElementById('ketqua').innerHTML = myShop[hoaqua];
+        }
+    </script>
+</body>
+
+</html>
