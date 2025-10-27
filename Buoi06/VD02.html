@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <h2>Nhập liệu</h2>
+        <div>
+            Họ tên: <input type="text" name="hoten" id="hoten" />
+        </div>
+        <div>
+            Chọn môn học:
+            <select name="monhoc" id="monhoc">
+                <option value="LTNC">Lập trình nâng cao</option>
+                <option value="LTHDT">Lập trình Hướng đối tượng</option>
+            </select>
+        </div>
+        <button type="button" onclick="xuLyGhiDanh()">Ghi danh</button>
+        <div id="ketqua"></div>
+    </form>
+    <script>
+        function xuLyGhiDanh() {
+            let hoTenEle = document.getElementById("hoten");
+            if (hoTenEle.value.trim().length == 0) {
+                alert("Chưa nhập họ tên");
+                hoTenEle.focus();//đưa dấu nháy vô ô nhập
+                return;
+            }
+            let monHoc = document.getElementById("monhoc").value;
+            let chuoi = `Bạn ${hoTenEle.value} ghi danh: ${monHoc}`;
+            alert(chuoi);
+            document.getElementById("ketqua").innerHTML = chuoi;
+        }
+
+    </script>
+</body>
+
+</html>
