@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>Div 1</div>
+    <div>Div 2</div>
+    <div>Div 3</div>
+    <div>Div 4</div>
+    <div>Div 5</div>
+    <script>
+        for (let i = 6; i < 116; i++) {
+            document.write(` <div>Div ${i}</div>`);
+        }
+    </script>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("div").click(function () {
+                $(this).hide(2000);
+            });
+        });
+    </script>
+</body>
+
+</html>
