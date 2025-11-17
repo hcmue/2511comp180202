@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
+</head>
+
+<body>
+    <div>Ngày sinh: <input type="date"></div>
+    <div>Từ ngày: <input id="tungay"></div>
+    <button id="showDialog">DIALOG</button>
+    <div id="mydialog" title="Thông tin" style="display: none;">
+        <h3>THÔNG TIN CÁ NHÂN</h3>
+        <div>Họ tên: Tèo Nguyễn</div>
+    </div>
+    <div id="ke_hoach">
+        <h3><a href="#">Học kỳ 1</a></h3>
+        <div>
+            <ul>
+                <li>Thiết kế Web</li>
+                <li>Lập trình cơ bản</li>
+            </ul>
+        </div>
+        <h3><a href="#">Học kỳ 2</a></h3>
+        <div>
+            <ul>
+                <li>OOP</li>
+                <li>Lập trình nâng cao</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $("#showDialog").click(function () {
+                $("#mydialog").dialog();
+            });
+
+            $("#ke_hoach").accordion();
+            $("#tungay").datepicker({
+                changeMonth: true,
+                changeYear: true,
+                maxDate: "+1m",
+                minDate: "-15d",
+                dateFormat: "dd/mm/yy"
+            });
+        });
+    </script>
+</body>
+
+</html>
